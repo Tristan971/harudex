@@ -27,4 +27,8 @@ public class HaruDexContext {
         currentToken.set(token);
     }
 
+    public void resetToken() {
+        currentToken.set(null);
+    }
+
 }

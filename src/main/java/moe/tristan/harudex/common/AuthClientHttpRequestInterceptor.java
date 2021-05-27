@@ -1,4 +1,4 @@
-package moe.tristan.harudex.auth;
+package moe.tristan.harudex.common;
 
 import java.io.IOException;
 

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
 
-import moe.tristan.harudex.auth.AuthClientHttpRequestInterceptor;
+import moe.tristan.harudex.common.AuthClientHttpRequestInterceptor;
 import moe.tristan.harudex.common.HaruDexClientRequestsLogger;
 import moe.tristan.harudex.common.HaruDexErrorHandler;
 import moe.tristan.harudex.common.HaruDexRestTemplate;

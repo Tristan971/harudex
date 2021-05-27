@@ -5,6 +5,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 import moe.tristan.harudex.util.AuthClientHttpRequestInterceptor;
@@ -13,6 +14,7 @@ import moe.tristan.harudex.util.HaruDexErrorHandler;
 import moe.tristan.harudex.util.HaruDexRestTemplate;
 
 @ComponentScan
+@Configuration(proxyBeanMethods = false)
 @EnableConfigurationProperties(HaruDexProperties.class)
 public class HaruDexAutoConfiguration {
 

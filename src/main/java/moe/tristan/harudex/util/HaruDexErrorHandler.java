@@ -1,4 +1,4 @@
-package moe.tristan.harudex.common;
+package moe.tristan.harudex.util;
 
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.web.client.ResponseErrorHandler;

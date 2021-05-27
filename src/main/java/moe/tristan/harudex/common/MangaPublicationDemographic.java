@@ -9,18 +9,20 @@ import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 
-public enum Result {
-    OK("ok"),
-    ERROR("error");
+public enum MangaPublicationDemographic {
+    SHOUNEN("shounen"),
+    SHOUJO("shoujo"),
+    JOSEI("josei"),
+    SEINEN("seinen");
 
-    private static final Map<String, Result> BY_CODE = Arrays.stream(values()).collect(Collectors.toMap(
-        Result::getCode,
+    private static final Map<String, MangaPublicationDemographic> BY_CODE = Arrays.stream(values()).collect(Collectors.toMap(
+        MangaPublicationDemographic::getCode,
         Function.identity()
     ));
 
     private final String code;
 
-    Result(String code) {
+    MangaPublicationDemographic(String code) {
         this.code = code;
     }
 
@@ -29,7 +31,7 @@ public enum Result {
     }
 
     @JsonCreator
-    public static Result fromString(String value) {
+    public static MangaPublicationDemographic fromString(String value) {
         return requireNonNull(
             BY_CODE.get(value),
             "Unknown code: " + value

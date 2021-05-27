@@ -7,10 +7,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
 
-import moe.tristan.harudex.common.AuthClientHttpRequestInterceptor;
-import moe.tristan.harudex.common.HaruDexClientRequestsLogger;
-import moe.tristan.harudex.common.HaruDexErrorHandler;
-import moe.tristan.harudex.common.HaruDexRestTemplate;
+import moe.tristan.harudex.util.AuthClientHttpRequestInterceptor;
+import moe.tristan.harudex.util.HaruDexClientRequestsLogger;
+import moe.tristan.harudex.util.HaruDexErrorHandler;
+import moe.tristan.harudex.util.HaruDexRestTemplate;
 
 @ComponentScan
 @EnableConfigurationProperties(HaruDexProperties.class)

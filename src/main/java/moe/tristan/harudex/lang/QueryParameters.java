@@ -9,6 +9,8 @@ import java.util.Optional;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
+import moe.tristan.harudex.model.common.CodedEnumeration;
+
 public final class QueryParameters {
 
     private QueryParameters() {
@@ -44,6 +46,10 @@ public final class QueryParameters {
     }
 
     private static String externalize(Object o) {
+        if (o instanceof CodedEnumeration ce) {
+            return ce.getCode();
+        }
+
         if (o instanceof Enum member) {
             return member.name().toLowerCase(Locale.ROOT);
         }

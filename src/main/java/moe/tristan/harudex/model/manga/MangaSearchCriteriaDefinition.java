@@ -2,6 +2,7 @@ package moe.tristan.harudex.model.manga;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
@@ -16,7 +17,6 @@ import moe.tristan.harudex.model.common.PageableRequest;
 import moe.tristan.harudex.model.common.statics.BinaryOperationType;
 import moe.tristan.harudex.model.common.statics.ContentRating;
 import moe.tristan.harudex.model.common.statics.OrderType;
-import moe.tristan.harudex.model.common.statics.OriginalLanguage;
 import moe.tristan.harudex.model.common.statics.PublicationDemographic;
 import moe.tristan.harudex.model.common.statics.PublicationStatus;
 
@@ -40,7 +40,7 @@ interface MangaSearchCriteriaDefinition extends PageableRequest {
 
     Optional<Set<PublicationStatus>> getStatuses();
 
-    Optional<Set<OriginalLanguage>> getOriginalLanguage();
+    Optional<Set<Locale>> getOriginalLanguage();
 
     Optional<Set<PublicationDemographic>> getPublicationDemographics();
 

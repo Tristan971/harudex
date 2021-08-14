@@ -2,6 +2,7 @@ package moe.tristan.harudex.model.manga;
 
 import java.time.ZonedDateTime;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
 
@@ -11,7 +12,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import moe.tristan.harudex.DataClass;
 import moe.tristan.harudex.model.common.statics.ContentRating;
-import moe.tristan.harudex.model.common.statics.OriginalLanguage;
 import moe.tristan.harudex.model.common.statics.PublicationStatus;
 
 @Immutable
@@ -26,7 +26,7 @@ interface MangaAttributesDefinition {
 
     Map<String, String> getLinks();
 
-    OriginalLanguage getOriginalLanguage();
+    Locale getOriginalLanguage();
 
     Optional<String> getLastVolume();
 

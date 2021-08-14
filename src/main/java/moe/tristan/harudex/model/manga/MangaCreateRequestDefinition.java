@@ -1,6 +1,7 @@
 package moe.tristan.harudex.model.manga;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
@@ -10,7 +11,6 @@ import org.immutables.value.Value.Immutable;
 
 import moe.tristan.harudex.DataClass;
 import moe.tristan.harudex.model.common.statics.ContentRating;
-import moe.tristan.harudex.model.common.statics.OriginalLanguage;
 import moe.tristan.harudex.model.common.statics.PublicationDemographic;
 import moe.tristan.harudex.model.common.statics.PublicationStatus;
 
@@ -30,7 +30,7 @@ public interface MangaCreateRequestDefinition {
 
     Map<String, String> getLinks();
 
-    OriginalLanguage getOriginalLanguage();
+    Locale getOriginalLanguage();
 
     Optional<Integer> getLastVolume();
 

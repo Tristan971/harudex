@@ -38,7 +38,7 @@ public class MangaHttpService implements MangaService {
             .fromHttpUrl(haruDexProperties.getBaseUrl())
             .path("/manga")
             .queryParams(criteria.asQueryParameters())
-            .build(false)
+            .build()
             .toUri();
         return restTemplate.getForObject(uri, MangaSearchResponse.class);
     }

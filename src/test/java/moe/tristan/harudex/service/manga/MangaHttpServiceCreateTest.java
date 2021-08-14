@@ -9,6 +9,7 @@ import static org.springframework.test.web.client.match.MockRestRequestMatchers.
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
+import java.util.Locale;
 import java.util.UUID;
 
 import org.junit.jupiter.api.Test;
@@ -19,7 +20,6 @@ import org.springframework.test.web.client.MockRestServiceServer;
 import moe.tristan.harudex.HttpClientTest;
 import moe.tristan.harudex.model.auth.AuthToken;
 import moe.tristan.harudex.model.common.statics.ContentRating;
-import moe.tristan.harudex.model.common.statics.OriginalLanguage;
 import moe.tristan.harudex.model.manga.MangaCreateRequest;
 
 @HttpClientTest(MangaHttpService.class)
@@ -68,7 +68,7 @@ public class MangaHttpServiceCreateTest {
             .putDescription("en", "Lotsa stuff happens and it's cool etc")
             .addAuthors(uuid)
             .contentRating(ContentRating.SUGGESTIVE)
-            .originalLanguage(OriginalLanguage.JA)
+            .originalLanguage(Locale.JAPANESE)
             .build();
 
         mangaHttpService.create(AuthToken.of("session-token", "refresh-token"), request);

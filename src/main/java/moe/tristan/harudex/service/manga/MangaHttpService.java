@@ -3,10 +3,8 @@ package moe.tristan.harudex.service.manga;
 import java.net.URI;
 import java.util.UUID;
 
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
-import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -19,14 +17,13 @@ import moe.tristan.harudex.model.manga.MangaEntity;
 import moe.tristan.harudex.model.manga.MangaSearchCriteria;
 import moe.tristan.harudex.model.manga.MangaSearchResponse;
 
-@Service
 public class MangaHttpService implements MangaService {
 
     private final RestTemplate restTemplate;
     private final HaruDexProperties haruDexProperties;
 
-    public MangaHttpService(RestTemplateBuilder restTemplateBuilder, HaruDexProperties haruDexProperties) {
-        this.restTemplate = restTemplateBuilder.build();
+    public MangaHttpService(RestTemplate restTemplate, HaruDexProperties haruDexProperties) {
+        this.restTemplate = restTemplate;
         this.haruDexProperties = haruDexProperties;
     }
 

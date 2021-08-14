@@ -1,7 +1,5 @@
 package moe.tristan.harudex.service.auth;
 
-import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import moe.tristan.harudex.AuthService;
@@ -13,14 +11,13 @@ import moe.tristan.harudex.model.auth.AuthLogoutResponse;
 import moe.tristan.harudex.model.auth.AuthRefreshTokenRequest;
 import moe.tristan.harudex.model.auth.AuthRefreshTokenResponse;
 
-@Service
 public class AuthHttpService implements AuthService {
 
     private final RestTemplate restTemplate;
     private final HaruDexProperties haruDexProperties;
 
-    public AuthHttpService(RestTemplateBuilder restTemplateBuilder, HaruDexProperties haruDexProperties) {
-        this.restTemplate = restTemplateBuilder.build();
+    public AuthHttpService(RestTemplate restTemplate, HaruDexProperties haruDexProperties) {
+        this.restTemplate = restTemplate;
         this.haruDexProperties = haruDexProperties;
     }
 

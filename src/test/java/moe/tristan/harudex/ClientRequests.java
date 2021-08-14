@@ -6,15 +6,13 @@ import java.time.Duration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.TestComponent;
-import org.springframework.boot.web.client.RestTemplateCustomizer;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.client.ClientHttpRequestExecution;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.ClientHttpResponse;
-import org.springframework.web.client.RestTemplate;
 
 @TestComponent
-public class ClientRequests implements ClientHttpRequestInterceptor, RestTemplateCustomizer {
+public class ClientRequests implements ClientHttpRequestInterceptor {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ClientRequests.class);
 
@@ -28,11 +26,6 @@ public class ClientRequests implements ClientHttpRequestInterceptor, RestTemplat
         long end = System.nanoTime();
         LOGGER.info("{} {} {} ({} ms)", request.getMethod(), request.getURI(), response.getStatusCode().value(), Duration.ofNanos(end - start).toMillis());
         return response;
-    }
-
-    @Override
-    public void customize(RestTemplate restTemplate) {
-        restTemplate.getInterceptors().add(this);
     }
 
 }

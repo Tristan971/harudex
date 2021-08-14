@@ -22,7 +22,7 @@ import org.springframework.core.annotation.AliasFor;
 @Import(value = {
     JacksonAutoConfiguration.class,
     RestTemplateAutoConfiguration.class,
-    ClientRequests.class
+    ClientTestConfiguration.class
 })
 @EnableConfigurationProperties(HaruDexProperties.class)
 @AutoConfigureMockRestServiceServer

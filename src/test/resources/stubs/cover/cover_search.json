@@ -1,0 +1,257 @@
+{
+  "results": [
+    {
+      "result": "ok",
+      "data": {
+        "id": "2dbb1184-e3f2-4f0e-89ed-45dd6fdc512e",
+        "type": "cover_art",
+        "attributes": {
+          "description": "",
+          "volume": "1",
+          "fileName": "0736e1e8-8f1e-4516-9855-b81bcd101616.jpg",
+          "createdAt": "2021-08-13T20:23:17+00:00",
+          "updatedAt": "2021-08-13T20:23:17+00:00",
+          "version": 2
+        }
+      },
+      "relationships": [
+        {
+          "id": "bf60170c-5ef6-4fa9-b698-fe99985295f6",
+          "type": "manga"
+        },
+        {
+          "id": "4e4f1cff-887b-474a-bb2b-d0a9ae50171b",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "result": "ok",
+      "data": {
+        "id": "91886c46-1020-4f4d-83e4-cc5a4a3ce156",
+        "type": "cover_art",
+        "attributes": {
+          "description": "",
+          "volume": "10",
+          "fileName": "cd81efe4-3e0f-4f53-aa17-39781fb32ee2.jpg",
+          "createdAt": "2021-08-12T04:47:22+00:00",
+          "updatedAt": "2021-08-12T04:47:22+00:00",
+          "version": 2
+        }
+      },
+      "relationships": [
+        {
+          "id": "67b35ba4-9c53-4957-91e7-4f7884e4b412",
+          "type": "manga"
+        },
+        {
+          "id": "f8cc4f8a-e596-4618-ab05-ef6572980bbf",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "result": "ok",
+      "data": {
+        "id": "29aad7ea-8c65-4fdd-8258-731c2245e716",
+        "type": "cover_art",
+        "attributes": {
+          "description": "",
+          "volume": null,
+          "fileName": "d2715c2e-5d18-4cdf-9faf-6e878553f2a8.png",
+          "createdAt": "2021-08-07T18:25:30+00:00",
+          "updatedAt": "2021-08-07T18:25:30+00:00",
+          "version": 1
+        }
+      },
+      "relationships": [
+        {
+          "id": "f9c33607-9180-4ba6-b85c-e4b5faee7192",
+          "type": "manga"
+        },
+        {
+          "id": "f8cc4f8a-e596-4618-ab05-ef6572980bbf",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "result": "ok",
+      "data": {
+        "id": "4062c0c2-ce0e-4f4d-b05c-f1f735644fc2",
+        "type": "cover_art",
+        "attributes": {
+          "description": "",
+          "volume": null,
+          "fileName": "96c57bc0-20a4-45ad-89e0-c56e19d5866d.png",
+          "createdAt": "2021-08-07T15:36:36+00:00",
+          "updatedAt": "2021-08-07T15:36:36+00:00",
+          "version": 1
+        }
+      },
+      "relationships": [
+        {
+          "id": "c8366c50-3c09-41ba-8ded-441c3193cb39",
+          "type": "manga"
+        },
+        {
+          "id": "f8cc4f8a-e596-4618-ab05-ef6572980bbf",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "result": "ok",
+      "data": {
+        "id": "59c3b970-4e6a-4f99-9fc2-25b33fce7f32",
+        "type": "cover_art",
+        "attributes": {
+          "description": "",
+          "volume": null,
+          "fileName": "fc782f6d-a189-499d-a1bb-d887194b8527.png",
+          "createdAt": "2021-08-06T21:48:56+00:00",
+          "updatedAt": "2021-08-06T21:48:56+00:00",
+          "version": 1
+        }
+      },
+      "relationships": [
+        {
+          "id": "f9c33607-9180-4ba6-b85c-e4b5faee7192",
+          "type": "manga"
+        },
+        {
+          "id": "7cafe7b7-9bd6-4afa-a6cf-0b4fa754d4b9",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "result": "ok",
+      "data": {
+        "id": "07e8e79e-30cf-4fa1-a73b-6600d812adc6",
+        "type": "cover_art",
+        "attributes": {
+          "description": "",
+          "volume": "2",
+          "fileName": "f03210a0-e2fd-4fad-b12b-0b35427266f8.jpg",
+          "createdAt": "2021-07-22T02:13:06+00:00",
+          "updatedAt": "2021-07-22T02:13:06+00:00",
+          "version": 2
+        }
+      },
+      "relationships": [
+        {
+          "id": "ba210374-7967-4c3e-972d-891a530c992a",
+          "type": "manga"
+        },
+        {
+          "id": "f8cc4f8a-e596-4618-ab05-ef6572980bbf",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "result": "ok",
+      "data": {
+        "id": "262cc78c-9b3b-4fbc-b610-01e9cd9286b0",
+        "type": "cover_art",
+        "attributes": {
+          "description": "",
+          "volume": "1",
+          "fileName": "97569e81-0056-4f8f-aa36-27ee3a972f31.jpg",
+          "createdAt": "2021-07-20T05:50:05+00:00",
+          "updatedAt": "2021-07-20T05:50:05+00:00",
+          "version": 2
+        }
+      },
+      "relationships": [
+        {
+          "id": "38bcbd61-1c76-436c-9e8c-8ee2e74831bf",
+          "type": "manga"
+        },
+        {
+          "id": "81304b72-005d-4e62-bea6-4cb65869f7da",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "result": "ok",
+      "data": {
+        "id": "923d1c3b-91d8-4f9d-a525-b40ce37f35b8",
+        "type": "cover_art",
+        "attributes": {
+          "description": "",
+          "volume": null,
+          "fileName": "b760e6ad-5f8f-4d28-baa4-8cb6e3c0b385.jpg",
+          "createdAt": "2021-07-17T14:44:18+00:00",
+          "updatedAt": "2021-07-17T14:44:18+00:00",
+          "version": 1
+        }
+      },
+      "relationships": [
+        {
+          "id": "0ae578ee-22e5-4e10-9160-f1d8495346a7",
+          "type": "manga"
+        },
+        {
+          "id": "4e4f1cff-887b-474a-bb2b-d0a9ae50171b",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "result": "ok",
+      "data": {
+        "id": "afd8cb07-d6e8-4fb5-b2f6-eda2762409ae",
+        "type": "cover_art",
+        "attributes": {
+          "description": "",
+          "volume": "1",
+          "fileName": "1562aa60-155a-4f67-a896-555c99bd7938.jpg",
+          "createdAt": "2021-07-16T16:53:38+00:00",
+          "updatedAt": "2021-07-16T16:53:38+00:00",
+          "version": 2
+        }
+      },
+      "relationships": [
+        {
+          "id": "9ee36db8-091a-4fdc-b7f1-8c6f7fca9e76",
+          "type": "manga"
+        },
+        {
+          "id": "81304b72-005d-4e62-bea6-4cb65869f7da",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "result": "ok",
+      "data": {
+        "id": "31521c7e-7e6a-4f5a-822f-d4f211b06810",
+        "type": "cover_art",
+        "attributes": {
+          "description": "",
+          "volume": "1",
+          "fileName": "42457fd8-732f-4007-9376-0bf179d0ce85.jpg",
+          "createdAt": "2021-07-16T16:52:46+00:00",
+          "updatedAt": "2021-07-16T16:52:46+00:00",
+          "version": 2
+        }
+      },
+      "relationships": [
+        {
+          "id": "c468420f-9a90-4f22-b766-64e3be56cd6c",
+          "type": "manga"
+        },
+        {
+          "id": "81304b72-005d-4e62-bea6-4cb65869f7da",
+          "type": "user"
+        }
+      ]
+    }
+  ],
+  "limit": 10,
+  "offset": 0,
+  "total": 117091
+}

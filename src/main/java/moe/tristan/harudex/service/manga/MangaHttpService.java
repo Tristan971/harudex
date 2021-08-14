@@ -8,6 +8,8 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import moe.tristan.harudex.MangaService;
+import moe.tristan.harudex.model.manga.MangaCreateRequest;
+import moe.tristan.harudex.model.manga.MangaCreateResponse;
 import moe.tristan.harudex.model.manga.MangaSearchCriteria;
 import moe.tristan.harudex.model.manga.MangaSearchResponse;
 
@@ -33,6 +35,11 @@ public class MangaHttpService implements MangaService {
             .build(false)
             .toUri();
         return restTemplate.getForObject(uri, MangaSearchResponse.class);
+    }
+
+    @Override
+    public MangaCreateResponse create(MangaCreateRequest createRequest) {
+        return restTemplate.postForObject("/manga", createRequest, MangaCreateResponse.class);
     }
 
 }

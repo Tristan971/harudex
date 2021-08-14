@@ -21,7 +21,7 @@ import moe.tristan.harudex.model.common.statics.PublicationStatus;
 import moe.tristan.harudex.model.manga.MangaSearchCriteria;
 
 @HttpClientTest(MangaHttpService.class)
-class MangaHttpServiceTest {
+class MangaHttpServiceSearchTest {
 
     @Autowired
     private MockRestServiceServer mangadexApi;

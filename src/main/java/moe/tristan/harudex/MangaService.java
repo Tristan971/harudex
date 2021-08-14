@@ -2,6 +2,7 @@ package moe.tristan.harudex;
 
 import java.util.UUID;
 
+import moe.tristan.harudex.model.auth.AuthToken;
 import moe.tristan.harudex.model.manga.MangaCreateRequest;
 import moe.tristan.harudex.model.manga.MangaEntity;
 import moe.tristan.harudex.model.manga.MangaSearchCriteria;
@@ -15,6 +16,6 @@ public interface MangaService {
 
     MangaEntity findById(UUID id);
 
-    MangaEntity create(MangaCreateRequest createRequest);
+    MangaEntity create(AuthToken authToken, MangaCreateRequest createRequest);
 
 }

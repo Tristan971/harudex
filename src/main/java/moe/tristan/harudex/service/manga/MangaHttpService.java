@@ -4,11 +4,16 @@ import java.net.URI;
 import java.util.UUID;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import moe.tristan.harudex.HaruDexProperties;
 import moe.tristan.harudex.MangaService;
+import moe.tristan.harudex.lang.AuthorizationHeaders;
+import moe.tristan.harudex.model.auth.AuthToken;
 import moe.tristan.harudex.model.manga.MangaCreateRequest;
 import moe.tristan.harudex.model.manga.MangaEntity;
 import moe.tristan.harudex.model.manga.MangaSearchCriteria;
@@ -19,8 +24,8 @@ public class MangaHttpService implements MangaService {
 
     private final RestTemplate restTemplate;
 
-    public MangaHttpService(RestTemplateBuilder restTemplateBuilder) {
-        this.restTemplate = restTemplateBuilder.build();
+    public MangaHttpService(RestTemplateBuilder restTemplateBuilder, HaruDexProperties haruDexProperties) {
+        this.restTemplate = restTemplateBuilder.rootUri(haruDexProperties.getBaseUrl()).build();
     }
 
     @Override
@@ -44,8 +49,9 @@ public class MangaHttpService implements MangaService {
     }
 
     @Override
-    public MangaEntity create(MangaCreateRequest createRequest) {
-        return restTemplate.postForObject("/manga", createRequest, MangaEntity.class);
+    public MangaEntity create(AuthToken authToken, MangaCreateRequest createRequest) {
+        HttpHeaders headers = AuthorizationHeaders.authHeaders(authToken);
+        return restTemplate.postForObject("/manga", new HttpEntity<>(createRequest, headers), MangaEntity.class);
     }
 
 }

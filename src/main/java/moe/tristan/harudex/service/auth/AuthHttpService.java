@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import moe.tristan.harudex.AuthService;
+import moe.tristan.harudex.HaruDexProperties;
 import moe.tristan.harudex.model.auth.AuthCheckTokenResponse;
 import moe.tristan.harudex.model.auth.AuthLoginRequest;
 import moe.tristan.harudex.model.auth.AuthLoginResponse;
@@ -17,8 +18,8 @@ public class AuthHttpService implements AuthService {
 
     private final RestTemplate restTemplate;
 
-    public AuthHttpService(RestTemplateBuilder restTemplateBuilder) {
-        this.restTemplate = restTemplateBuilder.build();
+    public AuthHttpService(RestTemplateBuilder restTemplateBuilder, HaruDexProperties haruDexProperties) {
+        this.restTemplate = restTemplateBuilder.rootUri(haruDexProperties.getBaseUrl()).build();
     }
 
     @Override

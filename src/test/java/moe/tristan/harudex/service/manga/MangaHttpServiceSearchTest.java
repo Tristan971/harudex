@@ -9,6 +9,7 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.UUID;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,6 +42,23 @@ class MangaHttpServiceSearchTest {
             );
 
         mangaHttpService.search();
+
+        mangadexApi.verify();
+    }
+
+    @Test
+    void searchById() {
+        mangadexApi
+            .expect(method(GET))
+            .andExpect(requestTo("/manga/09654360-fc8d-487a-bd25-f21439f25786"))
+            .andRespond(
+                withSuccess()
+                    .contentType(APPLICATION_JSON)
+                    .body(new ClassPathResource("stubs/manga/search_oneresult.json"))
+            );
+
+        UUID id = UUID.fromString("09654360-fc8d-487a-bd25-f21439f25786");
+        mangaHttpService.findById(id);
 
         mangadexApi.verify();
     }

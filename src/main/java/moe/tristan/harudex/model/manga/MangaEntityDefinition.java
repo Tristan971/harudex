@@ -10,7 +10,7 @@ import moe.tristan.harudex.model.common.WithResult;
 
 @Immutable
 @DataClass
-public interface MangaCreateResponseDefinition extends WithResult {
+public interface MangaEntityDefinition extends WithResult {
 
     MangaData getData();
 

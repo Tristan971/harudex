@@ -1,6 +1,7 @@
 package moe.tristan.harudex.service.manga;
 
 import java.net.URI;
+import java.util.UUID;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
@@ -9,7 +10,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import moe.tristan.harudex.MangaService;
 import moe.tristan.harudex.model.manga.MangaCreateRequest;
-import moe.tristan.harudex.model.manga.MangaCreateResponse;
+import moe.tristan.harudex.model.manga.MangaEntity;
 import moe.tristan.harudex.model.manga.MangaSearchCriteria;
 import moe.tristan.harudex.model.manga.MangaSearchResponse;
 
@@ -38,8 +39,13 @@ public class MangaHttpService implements MangaService {
     }
 
     @Override
-    public MangaCreateResponse create(MangaCreateRequest createRequest) {
-        return restTemplate.postForObject("/manga", createRequest, MangaCreateResponse.class);
+    public MangaEntity findById(UUID id) {
+        return restTemplate.getForObject("/manga/{uuid}", MangaEntity.class, id);
+    }
+
+    @Override
+    public MangaEntity create(MangaCreateRequest createRequest) {
+        return restTemplate.postForObject("/manga", createRequest, MangaEntity.class);
     }
 
 }

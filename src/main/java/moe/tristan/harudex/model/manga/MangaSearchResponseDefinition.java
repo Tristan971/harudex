@@ -11,6 +11,6 @@ import moe.tristan.harudex.model.common.Paged;
 @DataClass
 interface MangaSearchResponseDefinition extends Paged {
 
-    List<MangaSearchResult> getResults();
+    List<MangaEntity> getResults();
 
 }

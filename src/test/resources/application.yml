@@ -1,0 +1,6 @@
+logging:
+  level:
+    root: warn
+    moe.tristan: debug
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(%-32.32logger{0}){cyan} %clr(:){faint} %m%n%wEx"

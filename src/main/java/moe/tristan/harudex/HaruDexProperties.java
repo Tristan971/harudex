@@ -6,7 +6,9 @@ import org.springframework.boot.context.properties.ConstructorBinding;
 @ConstructorBinding
 @ConfigurationProperties("moe.tristan.harudex")
 public record HaruDexProperties(
-    String baseUrl
+    String baseUrl,
+    String username,
+    String password
 ) {
 
     @Override

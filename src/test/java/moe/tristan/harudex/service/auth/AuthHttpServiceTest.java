@@ -31,7 +31,7 @@ class AuthHttpServiceTest {
     void login() {
         mangadexApi
             .expect(method(POST))
-            .andExpect(requestTo("/auth/login"))
+            .andExpect(requestTo("https://api.mangadex.org/auth/login"))
             .andExpect(content().contentType(APPLICATION_JSON))
             .andExpect(content().json(
                 """

@@ -21,26 +21,28 @@ import moe.tristan.harudex.model.cover.CoverSearchResponse;
 public class CoverHttpService implements CoverService {
 
     private final RestTemplate restTemplate;
+    private final HaruDexProperties haruDexProperties;
 
     public CoverHttpService(RestTemplateBuilder restTemplateBuilder, HaruDexProperties haruDexProperties) {
-        this.restTemplate = restTemplateBuilder.rootUri(haruDexProperties.getBaseUrl()).build();
+        this.restTemplate = restTemplateBuilder.build();
+        this.haruDexProperties = haruDexProperties;
     }
 
     @Override
     public CoverEntity findById(UUID id) {
-        return restTemplate.getForObject("/cover/{coverId}", CoverEntity.class, id);
+        return restTemplate.getForObject(haruDexProperties.getBaseUrl() + "/cover/{coverId}", CoverEntity.class, id);
     }
 
     @Override
     public CoverSearchResponse search() {
-        return restTemplate.getForObject("/cover", CoverSearchResponse.class);
+        return restTemplate.getForObject(haruDexProperties.getBaseUrl() + "/cover", CoverSearchResponse.class);
     }
 
     @Override
     public CoverEntity upload(AuthToken authToken, UUID mangaId, InputStream content) {
         try {
             HttpHeaders authorization = AuthorizationHeaders.authHeaders(authToken);
-            return restTemplate.postForObject("/cover/{mangaId}", new HttpEntity<>(content.readAllBytes(), authorization), CoverEntity.class, mangaId);
+            return restTemplate.postForObject(haruDexProperties.getBaseUrl() + "/cover/{mangaId}", new HttpEntity<>(content.readAllBytes(), authorization), CoverEntity.class, mangaId);
         } catch (IOException e) {
             throw new IllegalArgumentException("Cannot read bytes from cover image input stream", e);
         }

@@ -12,6 +12,7 @@ import org.springframework.util.MultiValueMap;
 
 import moe.tristan.harudex.DataClass;
 import moe.tristan.harudex.lang.QueryParameters;
+import moe.tristan.harudex.model.common.PageableRequest;
 import moe.tristan.harudex.model.common.statics.BinaryOperationType;
 import moe.tristan.harudex.model.common.statics.ContentRating;
 import moe.tristan.harudex.model.common.statics.OrderType;
@@ -21,7 +22,7 @@ import moe.tristan.harudex.model.common.statics.PublicationStatus;
 
 @Immutable
 @DataClass
-interface MangaSearchCriteriaDefinition {
+interface MangaSearchCriteriaDefinition extends PageableRequest {
 
     Optional<String> getTitle();
 
@@ -71,6 +72,8 @@ interface MangaSearchCriteriaDefinition {
         properties.put("updatedAtSince", getUpdatedAtSince());
         properties.put("order", getOrdering());
         properties.put("includes", getIncludes());
+        properties.put("limit", getLimit());
+        properties.put("offset", getOffset());
 
         return QueryParameters.fromPresentProperties(properties);
     }

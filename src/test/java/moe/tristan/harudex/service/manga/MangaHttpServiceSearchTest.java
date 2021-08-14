@@ -34,7 +34,7 @@ class MangaHttpServiceSearchTest {
     void searchNoParams() {
         mangadexApi
             .expect(method(GET))
-            .andExpect(requestTo("/manga"))
+            .andExpect(requestTo("https://api.mangadex.org/manga"))
             .andRespond(
                 withSuccess()
                     .contentType(APPLICATION_JSON)
@@ -50,7 +50,7 @@ class MangaHttpServiceSearchTest {
     void searchById() {
         mangadexApi
             .expect(method(GET))
-            .andExpect(requestTo("/manga/09654360-fc8d-487a-bd25-f21439f25786"))
+            .andExpect(requestTo("https://api.mangadex.org/manga/09654360-fc8d-487a-bd25-f21439f25786"))
             .andRespond(
                 withSuccess()
                     .contentType(APPLICATION_JSON)
@@ -67,7 +67,7 @@ class MangaHttpServiceSearchTest {
     void searchParams() {
         mangadexApi
             .expect(method(GET))
-            .andExpect(requestTo("/manga?title=A%20title&status[]=ongoing&status[]=cancelled&order[createdAt]=asc&order[updatedAt]=desc"))
+            .andExpect(requestTo("https://api.mangadex.org/manga?title=A%20title&status[]=ongoing&status[]=cancelled&order[createdAt]=asc&order[updatedAt]=desc"))
             .andRespond(
                 withSuccess()
                     .contentType(APPLICATION_JSON)

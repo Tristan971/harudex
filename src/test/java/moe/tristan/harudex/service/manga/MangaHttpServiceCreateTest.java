@@ -36,7 +36,7 @@ public class MangaHttpServiceCreateTest {
 
         mangadexApi
             .expect(method(POST))
-            .andExpect(requestTo("/manga"))
+            .andExpect(requestTo("https://api.mangadex.org/manga"))
             .andExpect(header(AUTHORIZATION, "Bearer session-token"))
             .andExpect(content().contentType(APPLICATION_JSON))
             .andExpect(content().json(

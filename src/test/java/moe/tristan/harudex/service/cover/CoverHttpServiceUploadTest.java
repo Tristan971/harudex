@@ -37,7 +37,7 @@ class CoverHttpServiceUploadTest {
 
         mangadexApi
             .expect(method(POST))
-            .andExpect(requestTo("/cover/f68e2fb3-73f6-4a97-9b17-b4a34bea0dcd"))
+            .andExpect(requestTo("https://api.mangadex.org/cover/f68e2fb3-73f6-4a97-9b17-b4a34bea0dcd"))
             .andExpect(header("Authorization", "Bearer session-token"))
             .andExpect(content().contentType(APPLICATION_OCTET_STREAM))
             .andExpect(content().bytes(bytes))

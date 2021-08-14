@@ -28,7 +28,7 @@ class CoverHttpServiceSearchTest {
     void findById() {
         mangadexApi
             .expect(method(GET))
-            .andExpect(requestTo("/cover/f68e2fb3-73f6-4a97-9b17-b4a34bea0dcd"))
+            .andExpect(requestTo("https://api.mangadex.org/cover/f68e2fb3-73f6-4a97-9b17-b4a34bea0dcd"))
             .andRespond(withSuccess(
                 new ClassPathResource("stubs/cover/cover_view.json"),
                 APPLICATION_JSON
@@ -44,7 +44,7 @@ class CoverHttpServiceSearchTest {
     void search() {
         mangadexApi
             .expect(method(GET))
-            .andExpect(requestTo("/cover"))
+            .andExpect(requestTo("https://api.mangadex.org/cover"))
             .andRespond(withSuccess(
                 new ClassPathResource("stubs/cover/cover_search.json"),
                 APPLICATION_JSON

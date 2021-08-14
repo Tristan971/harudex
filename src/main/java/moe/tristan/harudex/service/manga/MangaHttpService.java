@@ -23,20 +23,23 @@ import moe.tristan.harudex.model.manga.MangaSearchResponse;
 public class MangaHttpService implements MangaService {
 
     private final RestTemplate restTemplate;
+    private final HaruDexProperties haruDexProperties;
 
     public MangaHttpService(RestTemplateBuilder restTemplateBuilder, HaruDexProperties haruDexProperties) {
-        this.restTemplate = restTemplateBuilder.rootUri(haruDexProperties.getBaseUrl()).build();
+        this.restTemplate = restTemplateBuilder.build();
+        this.haruDexProperties = haruDexProperties;
     }
 
     @Override
     public MangaSearchResponse search() {
-        return restTemplate.getForObject("/manga", MangaSearchResponse.class);
+        return restTemplate.getForObject(haruDexProperties.getBaseUrl() + "/manga", MangaSearchResponse.class);
     }
 
     @Override
     public MangaSearchResponse search(MangaSearchCriteria criteria) {
         URI uri = UriComponentsBuilder
-            .fromUriString("/manga")
+            .fromHttpUrl(haruDexProperties.getBaseUrl())
+            .path("/manga")
             .queryParams(criteria.asQueryParameters())
             .build(false)
             .toUri();
@@ -45,13 +48,13 @@ public class MangaHttpService implements MangaService {
 
     @Override
     public MangaEntity findById(UUID id) {
-        return restTemplate.getForObject("/manga/{uuid}", MangaEntity.class, id);
+        return restTemplate.getForObject(haruDexProperties.getBaseUrl() + "/manga/{uuid}", MangaEntity.class, id);
     }
 
     @Override
     public MangaEntity create(AuthToken authToken, MangaCreateRequest createRequest) {
         HttpHeaders headers = AuthorizationHeaders.authHeaders(authToken);
-        return restTemplate.postForObject("/manga", new HttpEntity<>(createRequest, headers), MangaEntity.class);
+        return restTemplate.postForObject(haruDexProperties.getBaseUrl() + "/manga", new HttpEntity<>(createRequest, headers), MangaEntity.class);
     }
 
 }

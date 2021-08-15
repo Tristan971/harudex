@@ -1,9 +1,7 @@
 package moe.tristan.harudex.model.auth;
 
-import java.util.Optional;
-
-import org.immutables.value.Value.Check;
 import org.immutables.value.Value.Immutable;
+import org.immutables.value.Value.Parameter;
 
 import moe.tristan.harudex.DataClass;
 
@@ -11,17 +9,10 @@ import moe.tristan.harudex.DataClass;
 @DataClass
 public interface AuthLoginRequestDefinition {
 
-    Optional<String> getUsername();
+    @Parameter
+    String getUsername();
 
-    Optional<String> getEmail();
-
+    @Parameter
     String getPassword();
-
-    @Check
-    default void check() {
-        if (getUsername().isEmpty() && getEmail().isEmpty()) {
-            throw new IllegalArgumentException("One of username or email must be defined, but none were set!");
-        }
-    }
 
 }

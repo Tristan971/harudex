@@ -8,12 +8,15 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
 
+import org.immutables.value.Value.Derived;
 import org.immutables.value.Value.Immutable;
 import org.springframework.util.MultiValueMap;
 
 import moe.tristan.harudex.DataClass;
 import moe.tristan.harudex.lang.QueryParameters;
 import moe.tristan.harudex.model.common.PageableRequest;
+import moe.tristan.harudex.model.common.SearchCriteria;
+import moe.tristan.harudex.model.common.WithIncludes;
 import moe.tristan.harudex.model.common.statics.BinaryOperationType;
 import moe.tristan.harudex.model.common.statics.ContentRating;
 import moe.tristan.harudex.model.common.statics.OrderType;
@@ -22,7 +25,7 @@ import moe.tristan.harudex.model.common.statics.PublicationStatus;
 
 @Immutable
 @DataClass
-interface MangaSearchCriteriaDefinition extends PageableRequest {
+interface MangaSearchCriteriaDefinition extends PageableRequest, SearchCriteria, WithIncludes {
 
     Optional<String> getTitle();
 
@@ -52,10 +55,9 @@ interface MangaSearchCriteriaDefinition extends PageableRequest {
 
     Optional<Map<String, OrderType>> getOrdering();
 
-    Optional<Set<String>> getIncludes();
-
+    @Derived
     default MultiValueMap<String, String> asQueryParameters() {
-        HashMap<String, Optional<?>> properties = new HashMap<>();
+        Map<String, Optional<?>> properties = new HashMap<>();
 
         properties.put("title", getTitle());
         properties.put("ids", getIds());

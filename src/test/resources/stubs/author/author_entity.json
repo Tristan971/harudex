@@ -1,0 +1,57 @@
+{
+  "result": "ok",
+  "data": {
+    "id": "d7358461-3ecb-422c-87d0-8d09c4c56a18",
+    "type": "author",
+    "attributes": {
+      "name": "Mochi Au Lait",
+      "imageUrl": null,
+      "biography": [],
+      "createdAt": "2021-04-19T21:59:45+00:00",
+      "updatedAt": "2021-04-19T21:59:45+00:00",
+      "version": 1
+    }
+  },
+  "relationships": [
+    {
+      "id": "bb1df590-5539-46bf-ac1c-6a103d82a95f",
+      "type": "manga"
+    },
+    {
+      "id": "cfcf5a88-0a19-4ecc-a15a-61efb0976205",
+      "type": "manga"
+    },
+    {
+      "id": "82f00907-2805-4df4-8390-3fce45e1b1d3",
+      "type": "manga"
+    },
+    {
+      "id": "938f277b-718e-45dd-b58d-8d862bb1494b",
+      "type": "manga"
+    },
+    {
+      "id": "ee5ba9c9-8044-495b-8f58-6eb847734769",
+      "type": "manga"
+    },
+    {
+      "id": "22712200-5f60-474e-86a0-084e4633f733",
+      "type": "manga"
+    },
+    {
+      "id": "0e818e0b-5682-4e55-8e35-0b212cfc7132",
+      "type": "manga"
+    },
+    {
+      "id": "ac580a1e-e556-47b3-bbea-0100d2a04226",
+      "type": "manga"
+    },
+    {
+      "id": "8f3e1818-a015-491d-bd81-3addc4d7d56a",
+      "type": "manga"
+    },
+    {
+      "id": "a64fddd8-3767-4935-a034-acb783310ceb",
+      "type": "manga"
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 package moe.tristan.harudex.model.manga;
 
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_EMPTY;
+
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -9,6 +11,8 @@ import java.util.UUID;
 import org.immutables.value.Value.Derived;
 import org.immutables.value.Value.Immutable;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import moe.tristan.harudex.DataClass;
 import moe.tristan.harudex.model.common.statics.ContentRating;
 import moe.tristan.harudex.model.common.statics.PublicationDemographic;
@@ -16,6 +20,7 @@ import moe.tristan.harudex.model.common.statics.PublicationStatus;
 
 @Immutable
 @DataClass
+@JsonInclude(value = NON_EMPTY, content = NON_EMPTY)
 public interface MangaCreateRequestDefinition {
 
     Map<String, String> getTitle();

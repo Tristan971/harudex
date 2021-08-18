@@ -12,6 +12,7 @@ import org.immutables.value.Value.Derived;
 import org.immutables.value.Value.Immutable;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import moe.tristan.harudex.DataClass;
 import moe.tristan.harudex.model.common.statics.ContentRating;
@@ -43,6 +44,7 @@ public interface MangaCreateRequestDefinition {
 
     Optional<PublicationDemographic> getPublicationDemographic();
 
+    @JsonProperty("status")
     PublicationStatus getPublicationStatus();
 
     Optional<Integer> getReleaseYear();

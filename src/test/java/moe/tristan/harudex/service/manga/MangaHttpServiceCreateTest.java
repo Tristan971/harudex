@@ -51,7 +51,7 @@ public class MangaHttpServiceCreateTest {
                       },
                       "authors": ["6297d793-581b-4b85-aa8f-e955ec7d427c"],
                       "contentRating": "suggestive",
-                      "publicationStatus": "ongoing",
+                      "status": "ongoing",
                       "originalLanguage": "ja",
                       "version": 1
                     }

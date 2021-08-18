@@ -1,11 +1,13 @@
 package moe.tristan.harudex.service.cover;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.UUID;
 
+import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 import moe.tristan.harudex.CoverService;
@@ -36,18 +38,24 @@ public class CoverHttpService implements CoverService {
     }
 
     @Override
-    public CoverEntity upload(AuthToken authToken, UUID mangaId, InputStream content) {
-        try {
-            HttpHeaders authorization = AuthorizationHeaders.authHeaders(authToken);
-            return restTemplate.postForObject(
-                haruDexProperties.getBaseUrl() + "/cover/{mangaId}",
-                new HttpEntity<>(content.readAllBytes(), authorization),
-                CoverEntity.class,
-                mangaId
-            );
-        } catch (IOException e) {
-            throw new IllegalArgumentException("Cannot read bytes from cover image input stream", e);
-        }
+    public CoverEntity upload(AuthToken authToken, UUID mangaId, byte[] content) {
+        HttpHeaders headers = AuthorizationHeaders.authHeaders(authToken);
+        headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+
+        MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
+        body.add("file", new ByteArrayResource(content) {
+            @Override
+            public String getFilename() {
+                return "cover";
+            }
+        });
+
+        return restTemplate.postForObject(
+            haruDexProperties.getBaseUrl() + "/cover/{mangaId}",
+            new HttpEntity<>(body, headers),
+            CoverEntity.class,
+            mangaId
+        );
     }
 
 }

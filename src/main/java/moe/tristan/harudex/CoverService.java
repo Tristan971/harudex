@@ -1,6 +1,5 @@
 package moe.tristan.harudex;
 
-import java.io.InputStream;
 import java.util.UUID;
 
 import moe.tristan.harudex.model.auth.AuthToken;
@@ -13,6 +12,6 @@ public interface CoverService {
 
     CoverSearchResponse search();
 
-    CoverEntity upload(AuthToken authToken, UUID mangaId, InputStream content);
+    CoverEntity upload(AuthToken authToken, UUID mangaId, byte[] content);
 
 }

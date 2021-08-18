@@ -43,7 +43,7 @@ public interface MangaCreateRequestDefinition {
 
     Optional<PublicationDemographic> getPublicationDemographic();
 
-    Optional<PublicationStatus> getPublicationStatus();
+    PublicationStatus getPublicationStatus();
 
     Optional<Integer> getReleaseYear();
 

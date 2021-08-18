@@ -20,6 +20,7 @@ import org.springframework.test.web.client.MockRestServiceServer;
 import moe.tristan.harudex.HttpClientTest;
 import moe.tristan.harudex.model.auth.AuthToken;
 import moe.tristan.harudex.model.common.statics.ContentRating;
+import moe.tristan.harudex.model.common.statics.PublicationStatus;
 import moe.tristan.harudex.model.manga.MangaCreateRequest;
 
 @HttpClientTest(MangaHttpService.class)
@@ -50,6 +51,7 @@ public class MangaHttpServiceCreateTest {
                       },
                       "authors": ["6297d793-581b-4b85-aa8f-e955ec7d427c"],
                       "contentRating": "suggestive",
+                      "publicationStatus": "ongoing",
                       "originalLanguage": "ja",
                       "version": 1
                     }
@@ -67,6 +69,7 @@ public class MangaHttpServiceCreateTest {
             .putTitle("en", "Test title")
             .putDescription("en", "Lotsa stuff happens and it's cool etc")
             .addAuthors(uuid)
+            .publicationStatus(PublicationStatus.ONGOING)
             .contentRating(ContentRating.SUGGESTIVE)
             .originalLanguage(Locale.JAPANESE)
             .build();

@@ -67,7 +67,7 @@ class MangaHttpServiceSearchTest {
     void searchParams() {
         mangadexApi
             .expect(method(GET))
-            .andExpect(requestTo("https://api.mangadex.org/manga?title=A%20title&status[]=ongoing&status[]=cancelled&order[createdAt]=asc&order[updatedAt]=desc"))
+            .andExpect(requestTo("https://api.mangadex.org/manga?title=A+title&status[]=ongoing&status[]=cancelled&order[createdAt]=asc&order[updatedAt]=desc"))
             .andRespond(
                 withSuccess()
                     .contentType(APPLICATION_JSON)

@@ -56,7 +56,7 @@ class AuthorHttpServiceTest {
     void search() {
         mangadexApi
             .expect(method(GET))
-            .andExpect(requestTo("https://api.mangadex.org/author?name=Mochi%20au%20Lait&limit=5"))
+            .andExpect(requestTo("https://api.mangadex.org/author?name=Mochi+au+Lait&limit=5"))
             .andRespond(withSuccess(new ClassPathResource("stubs/author/author_search.json"), MediaType.APPLICATION_JSON));
 
         AuthorSearchCriteria criteria = AuthorSearchCriteria

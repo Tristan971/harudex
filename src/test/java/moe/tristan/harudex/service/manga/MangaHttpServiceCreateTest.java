@@ -71,7 +71,7 @@ public class MangaHttpServiceCreateTest {
             .addAuthors(uuid)
             .publicationStatus(PublicationStatus.ONGOING)
             .contentRating(ContentRating.SUGGESTIVE)
-            .originalLanguage(Locale.JAPANESE)
+            .originalLanguage(Locale.JAPANESE.getLanguage())
             .build();
 
         mangaHttpService.create(AuthToken.of("session-token", "refresh-token"), request);

@@ -36,7 +36,7 @@ public interface MangaCreateRequestDefinition {
 
     Map<String, String> getLinks();
 
-    Locale getOriginalLanguage();
+    String getOriginalLanguage();
 
     Optional<Integer> getLastVolume();
 

@@ -1,5 +1,6 @@
 {
   "result": "ok",
+  "response": "entity",
   "data": {
     "id": "2dbb1184-e3f2-4f0e-89ed-45dd6fdc512e",
     "type": "cover_art",
@@ -10,16 +11,16 @@
       "createdAt": "2021-08-13T20:23:17+00:00",
       "updatedAt": "2021-08-13T20:23:17+00:00",
       "version": 2
-    }
-  },
-  "relationships": [
-    {
-      "id": "bf60170c-5ef6-4fa9-b698-fe99985295f6",
-      "type": "manga"
     },
-    {
-      "id": "4e4f1cff-887b-474a-bb2b-d0a9ae50171b",
-      "type": "user"
-    }
-  ]
+    "relationships": [
+      {
+        "id": "bf60170c-5ef6-4fa9-b698-fe99985295f6",
+        "type": "manga"
+      },
+      {
+        "id": "4e4f1cff-887b-474a-bb2b-d0a9ae50171b",
+        "type": "user"
+      }
+    ]
+  }
 }

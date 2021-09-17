@@ -11,6 +11,6 @@ import moe.tristan.harudex.model.common.Paged;
 @DataClass
 public interface CoverSearchResponseDefinition extends Paged {
 
-    List<CoverEntity> getResults();
+    List<CoverData> getData();
 
 }

@@ -1,5 +1,6 @@
 package moe.tristan.harudex.service.author;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 import static org.springframework.http.HttpMethod.GET;
 import static org.springframework.http.HttpMethod.POST;
@@ -18,7 +19,9 @@ import org.springframework.test.web.client.MockRestServiceServer;
 import moe.tristan.harudex.HttpClientTest;
 import moe.tristan.harudex.model.auth.AuthToken;
 import moe.tristan.harudex.model.author.AuthorCreateRequest;
+import moe.tristan.harudex.model.author.AuthorEntity;
 import moe.tristan.harudex.model.author.AuthorSearchCriteria;
+import moe.tristan.harudex.model.author.AuthorSearchResponse;
 
 @HttpClientTest(AuthorHttpService.class)
 class AuthorHttpServiceTest {
@@ -47,7 +50,8 @@ class AuthorHttpServiceTest {
             .andRespond(withSuccess(new ClassPathResource("stubs/author/author_entity.json"), MediaType.APPLICATION_JSON));
 
         AuthorCreateRequest request = AuthorCreateRequest.of("Mochi au Lait");
-        authorHttpService.create(AuthToken.of("session-token", "refresh-token"), request);
+        AuthorEntity created = authorHttpService.create(AuthToken.of("session-token", "refresh-token"), request);
+        assertThat(created.getData().getAttributes().getName()).isEqualTo("Mochi Au Lait");
 
         mangadexApi.verify();
     }
@@ -56,7 +60,7 @@ class AuthorHttpServiceTest {
     void search() {
         mangadexApi
             .expect(method(GET))
-            .andExpect(requestTo("https://api.mangadex.org/author?name=Mochi+au+Lait&limit=5"))
+            .andExpect(requestTo("https://api.mangadex.org/author?name=Mochi%20au%20Lait&limit=5"))
             .andRespond(withSuccess(new ClassPathResource("stubs/author/author_search.json"), MediaType.APPLICATION_JSON));
 
         AuthorSearchCriteria criteria = AuthorSearchCriteria
@@ -65,7 +69,8 @@ class AuthorHttpServiceTest {
             .limit(5)
             .build();
 
-        authorHttpService.search(criteria);
+        AuthorSearchResponse response = authorHttpService.search(criteria);
+        assertThat(response.getData().get(0).getAttributes().getName()).isEqualTo("Mochi Au Lait");
 
         mangadexApi.verify();
     }

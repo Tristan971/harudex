@@ -47,14 +47,14 @@ class MangaHttpServiceSearchTest {
     }
 
     @Test
-    void searchById() {
+    void getById() {
         mangadexApi
             .expect(method(GET))
             .andExpect(requestTo("https://api.mangadex.org/manga/09654360-fc8d-487a-bd25-f21439f25786"))
             .andRespond(
                 withSuccess()
                     .contentType(APPLICATION_JSON)
-                    .body(new ClassPathResource("stubs/manga/search_oneresult.json"))
+                    .body(new ClassPathResource("stubs/manga/manga_view.json"))
             );
 
         UUID id = UUID.fromString("09654360-fc8d-487a-bd25-f21439f25786");
@@ -67,7 +67,7 @@ class MangaHttpServiceSearchTest {
     void searchParams() {
         mangadexApi
             .expect(method(GET))
-            .andExpect(requestTo("https://api.mangadex.org/manga?title=A+title&status[]=ongoing&status[]=cancelled&order[createdAt]=asc&order[updatedAt]=desc"))
+            .andExpect(requestTo("https://api.mangadex.org/manga?title=A%20title&status[]=ongoing&status[]=cancelled&order[createdAt]=asc&order[updatedAt]=desc"))
             .andRespond(
                 withSuccess()
                     .contentType(APPLICATION_JSON)

@@ -14,6 +14,4 @@ public interface AuthorEntityDefinition extends WithResult {
 
     AuthorData getData();
 
-    List<Relationship> getRelationships();
-
 }

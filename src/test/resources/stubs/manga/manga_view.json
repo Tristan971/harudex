@@ -1,0 +1,127 @@
+{
+  "result": "ok",
+  "response": "entity",
+  "data": {
+    "id": "8f3e1818-a015-491d-bd81-3addc4d7d56a",
+    "type": "manga",
+    "attributes": {
+      "title": {
+        "en": "Sorry, but I\u0027m Not Into Yuri"
+      },
+      "altTitles": [
+        {
+          "en": "Warui ga Watashi wa Yuri ja nai"
+        },
+        {
+          "ja": "\u60aa\u3044\u304c\u79c1\u306f\u767e\u5408\u3058\u3083\u306a\u3044"
+        },
+        {
+          "zh": "\u867d\u7136\u5f88\u62b1\u6b49\u4f46\u6211\u4e0d\u662f\u767e\u5408"
+        }
+      ],
+      "description": {
+        "en": "In an attempt to win her homeroom teacher\u0027s heart, Itsumi Toudou purchashed a shady love potion, and tested it out on her stuck-up student committee president, Yomotsuka. Now, she has an uncharacteristically affectionate girl to deal with, and she\u0027s not even a lesbian! Right?",
+        "es": "Em uma tentativa de ganhar o cora\u00e7\u00e3o de seu professor de sala de aula, Itsumi Toudou comprou uma po\u00e7\u00e3o do amor sombria e a testou em sua presun\u00e7osa presidente do comit\u00ea estudantil, Yomotsuka. Agora, ela tem uma garota estranhamente afetuosa para lidar, e ela nem \u00e9 l\u00e9sbica! Certo?"
+      },
+      "links": {
+        "al": "119506",
+        "ap": "warui-ga-watashi-wa-yuri-ja-nai",
+        "bw": "series\/238752",
+        "mu": "162464",
+        "mal": "131253",
+        "raw": "https:\/\/comic.pixiv.net\/works\/6356"
+      },
+      "originalLanguage": "ja",
+      "lastVolume": null,
+      "lastChapter": null,
+      "publicationDemographic": "seinen",
+      "status": "ongoing",
+      "year": null,
+      "contentRating": "suggestive",
+      "tags": [
+        {
+          "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Romance"
+            },
+            "description": [],
+            "group": "genre",
+            "version": 1
+          },
+          "relationships": []
+        },
+        {
+          "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Comedy"
+            },
+            "description": [],
+            "group": "genre",
+            "version": 1
+          },
+          "relationships": []
+        },
+        {
+          "id": "a3c67850-4684-404e-9b7f-c69850ee5da6",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Girls\u0027 Love"
+            },
+            "description": [],
+            "group": "genre",
+            "version": 1
+          },
+          "relationships": []
+        },
+        {
+          "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "School Life"
+            },
+            "description": [],
+            "group": "theme",
+            "version": 1
+          },
+          "relationships": []
+        },
+        {
+          "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Slice of Life"
+            },
+            "description": [],
+            "group": "genre",
+            "version": 1
+          },
+          "relationships": []
+        }
+      ],
+      "createdAt": "2020-06-25T02:57:59+00:00",
+      "updatedAt": "2021-09-12T01:32:44+00:00",
+      "version": 5
+    },
+    "relationships": [
+      {
+        "id": "d7358461-3ecb-422c-87d0-8d09c4c56a18",
+        "type": "author"
+      },
+      {
+        "id": "d7358461-3ecb-422c-87d0-8d09c4c56a18",
+        "type": "artist"
+      },
+      {
+        "id": "a71b1a85-5f11-4fd4-a805-8eaa55fe77be",
+        "type": "cover_art"
+      }
+    ]
+  }
+}

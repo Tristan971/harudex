@@ -1,18 +1,17 @@
 {
-  "results": [
+  "result": "ok",
+  "response": "collection",
+  "data": [
     {
-      "result": "ok",
-      "data": {
-        "id": "d7358461-3ecb-422c-87d0-8d09c4c56a18",
-        "type": "author",
-        "attributes": {
-          "name": "Mochi Au Lait",
-          "imageUrl": null,
-          "biography": [],
-          "createdAt": "2021-04-19T21:59:45+00:00",
-          "updatedAt": "2021-04-19T21:59:45+00:00",
-          "version": 1
-        }
+      "id": "d7358461-3ecb-422c-87d0-8d09c4c56a18",
+      "type": "author",
+      "attributes": {
+        "name": "Mochi Au Lait",
+        "imageUrl": null,
+        "biography": [],
+        "createdAt": "2021-04-19T21:59:45+00:00",
+        "updatedAt": "2021-04-19T21:59:45+00:00",
+        "version": 1
       },
       "relationships": [
         {
@@ -56,121 +55,9 @@
           "type": "manga"
         }
       ]
-    },
-    {
-      "result": "ok",
-      "data": {
-        "id": "1716708e-41ce-468a-905b-821efaa2d237",
-        "type": "author",
-        "attributes": {
-          "name": "mochi",
-          "imageUrl": null,
-          "biography": [],
-          "createdAt": "2021-04-19T21:59:45+00:00",
-          "updatedAt": "2021-04-19T21:59:45+00:00",
-          "version": 1
-        }
-      },
-      "relationships": [
-        {
-          "id": "832730d8-4cad-4ea5-9f4f-3bdb4ed3f0c4",
-          "type": "manga"
-        }
-      ]
-    },
-    {
-      "result": "ok",
-      "data": {
-        "id": "59eee3c3-490e-41e1-b3ae-ed387089b331",
-        "type": "author",
-        "attributes": {
-          "name": "Mochi",
-          "imageUrl": null,
-          "biography": [],
-          "createdAt": "2021-04-19T21:59:45+00:00",
-          "updatedAt": "2021-04-19T21:59:45+00:00",
-          "version": 1
-        }
-      },
-      "relationships": [
-        {
-          "id": "38a89cab-9a61-4adb-ad5f-f079064027a0",
-          "type": "manga"
-        },
-        {
-          "id": "26c6bf0d-036e-4bf8-b336-edf13f93dd1d",
-          "type": "manga"
-        },
-        {
-          "id": "6443ddaf-8a35-4cbe-bd46-8f8967f5f8af",
-          "type": "manga"
-        },
-        {
-          "id": "04a4668e-c7c4-4482-bcd8-623ca9bb371a",
-          "type": "manga"
-        },
-        {
-          "id": "1a1032fc-e8f7-425b-aa78-d9072f8de514",
-          "type": "manga"
-        },
-        {
-          "id": "c124b460-604f-4437-bff7-f14aceb7c14b",
-          "type": "manga"
-        },
-        {
-          "id": "6c5a75b6-4d0d-473d-b075-d12438010858",
-          "type": "manga"
-        },
-        {
-          "id": "f506cce7-e6da-4cc5-a4f3-551896690abe",
-          "type": "manga"
-        }
-      ]
-    },
-    {
-      "result": "ok",
-      "data": {
-        "id": "de0fdf5c-a2ca-4bd5-a0cf-6a4b826a5ffb",
-        "type": "author",
-        "attributes": {
-          "name": "MOCHI",
-          "imageUrl": null,
-          "biography": [],
-          "createdAt": "2021-04-19T21:59:45+00:00",
-          "updatedAt": "2021-04-19T21:59:45+00:00",
-          "version": 1
-        }
-      },
-      "relationships": [
-        {
-          "id": "3e85a912-5334-4811-b0b5-397d6d0b057c",
-          "type": "manga"
-        }
-      ]
-    },
-    {
-      "result": "ok",
-      "data": {
-        "id": "469cbdb0-21fb-4f71-9f97-455088e04982",
-        "type": "author",
-        "attributes": {
-          "name": "mochi-ya",
-          "imageUrl": null,
-          "biography": [],
-          "createdAt": "2021-04-19T21:59:45+00:00",
-          "updatedAt": "2021-04-19T21:59:45+00:00",
-          "version": 1
-        }
-      },
-      "relationships": [
-        {
-          "id": "c08be9c0-a487-4e50-b4a9-be58fb7e4b1f",
-          "type": "manga"
-        }
-      ]
     }
   ],
   "limit": 5,
   "offset": 0,
-  "total": 12
+  "total": 1
 }

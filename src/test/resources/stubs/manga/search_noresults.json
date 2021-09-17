@@ -1,8 +1,8 @@
 {
-  "results": [
-
-  ],
-  "limit": 10,
+  "result": "ok",
+  "response": "collection",
+  "data": [],
+  "limit": 0,
   "offset": 0,
-  "total": 0
+  "total": 43195
 }

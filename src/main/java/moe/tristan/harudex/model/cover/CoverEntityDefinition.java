@@ -14,6 +14,4 @@ public interface CoverEntityDefinition extends WithResult {
 
     CoverData getData();
 
-    List<Relationship> getRelationships();
-
 }

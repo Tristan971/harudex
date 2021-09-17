@@ -1,7 +1,5 @@
 package moe.tristan.harudex.lang;
 
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
@@ -56,8 +54,8 @@ public final class QueryParameters {
             return member.name().toLowerCase(Locale.ROOT);
         }
 
-        String value = String.valueOf(o);
-        return URLEncoder.encode(value, StandardCharsets.UTF_8);
+        // sigh
+        return String.valueOf(o).replace("&", " ");
     }
 
 }
